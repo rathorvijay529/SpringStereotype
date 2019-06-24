@@ -1,0 +1,54 @@
+@Component: General Stereotype
+@Controller : Specialization Stereotype of component(it support many other annotation like @RequestMApping, @Path,Consume,Produce etc.)
+@Service : Specialization Stereotype of component
+@Repository : Specialization Stereotype of component(if you are using this then only all unchecked exception will translate in to 
+DataAccessExceptionthat has to handle in to service layer)
+
+
+
+
+
+
+
+
+
+@Autowired
+@Configuration
+@ComponentScan
+@ComponentScan(basepackage="")
+@Value
+@Bean
+@Qualifier
+@RestController
+
+
+API - It is collection of program , methods and interface and the constructor
+
+
+REST(Representational State Transfer)- It is a architectural style that is used to communicate between client and server to access the data  by using http protocol.
+2.It is a state less(http also a state less)
+3.Rest support different different formats like text, json, xml etc.
+
+HTTP Methods -
+1. GET()-getting the information from db/server
+2. POST()(non-Idempotent)-used to create the resource(entry in the db)
+3. PUT() -used to update the resource
+4  PATCH()- used to update the resource
+5  DELETE() -used to delete the resource
+6  HEAD()
+7  TRACE()
+8  OPTIONS()- used to get the option from the particular resource.
+  Idempotant - when multiple request is coming then outcome should not change. 
+  
+  Interview question
+  1 PUT vs POST - 
+  2 PUT vs Patch- used to update specific property(patch) and updatin the fully replacement(put)
+  3 get vs POST
+  what is rest?
+  
+  Stateless- Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, 
+  it includes all information necessary for the server to fulfill that request. The server never relies on information from previous requests.
+  If that information was important, the client would have sent it again in this request.
+  
+  @RequestMapping("/path"):- This annotation is used to identify the controller if this annotaion is used in class level
+  If it is method level then it is used to identify in a particular resource(API).
